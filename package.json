@@ -1,7 +1,7 @@
 {
-  "name": "consumer-api",
+  "name": "BackendCEP",
   "version": "1.0.0",
-  "description": "Criar um api\r - [] Iniciar o projeto ` npminit -y `\r - [] Instalar as dependências `npm i express nodemon cors axios`\r - [] Criar uma rota para acessar a API \r - [] Servir a API \r - [] Habilitar o CORS\r - [] Habilitar o nodemon para reiniciar o server",
+  "description": "Projeto BackendCEP",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
