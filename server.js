@@ -13,8 +13,7 @@ const axios = require('axios')
 //Habilitação do cors
 app.use(cors())
 
-/*Rota
-  Objeto assíncrono que vai pegar os dados solicitados de acordo com o cep informado*/
+//Rota que recebe o cep e devolve os dados 
 app.get('/:cep', async (req, res) => {
   try { 
 
@@ -28,11 +27,11 @@ app.get('/:cep', async (req, res) => {
       url: `https://viacep.com.br/ws/${cep}/json/`,
       }
     ); 
-    //Resposta da requisição
-    console.log(informacoes.data)
-      return res.json(informacoes.data)
 
-  //identifica o erro
+    
+          return res.json(informacoes.data)
+
+  //identifica erro
   } catch (error) {
     console.log(error)
     return res.json (error)
@@ -41,6 +40,6 @@ app.get('/:cep', async (req, res) => {
 // informa a porta a ser ouvida pelo express
 app.listen('4567', function (){
 
-  // se o servidor tiver funcionando retornacom essa string
+  // se o servidor tiver funcionando retorna com essa string
   console.log('servidor ligado')
 })
